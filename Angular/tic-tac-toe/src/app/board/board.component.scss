@@ -1,0 +1,24 @@
+#game-header {
+    margin: 2em 0;
+    color: #c2185b;
+    font-weight: bolder;
+    text-align: center;
+}
+
+main {
+    margin-top: 2em;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    grid-template-columns: 200px 200px 200px;
+    grid-gap: 0px;
+}
+  
+app-cell {
+    border: 1px gray solid;
+    height: 200px;
+}
+
+button.mat-raised-button {
+    margin-left: 2em;
+}

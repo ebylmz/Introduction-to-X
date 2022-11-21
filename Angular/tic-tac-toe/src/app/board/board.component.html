@@ -1,0 +1,25 @@
+<h1 id="game-header">Tic Tac Toe </h1>
+
+<h2>Current Player: {{ player }} </h2>
+
+<button mat-raised-button color="accent" (click)="startNewGame()">
+  <mat-icon>restore</mat-icon>
+  <span>Start new game</span>
+</button>
+<button mat-raised-button color="accent" (click)="undo()">
+  <mat-icon>undo</mat-icon>
+  <span>Undo movement</span>
+</button>
+
+<h2 *ngIf="winner">
+  Player {{ winner }} won the game!
+</h2>
+
+<main>
+    <app-cell
+        *ngFor="let cell of board; let i = index"
+        [value]="cell"
+        (click)="makeMove(i)">
+    </app-cell>    
+</main>
+
